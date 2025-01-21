@@ -1,0 +1,54 @@
+@import '@fontsource/roboto'; /* For Roboto font */
+@import '@fontsource/lato'; /* For Lato font */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default body styles */
+body {
+  font-family: 'Roboto', sans-serif; /* Or any other font you've chosen */
+  background-color: #f9f9f9; /* A clean, light background color */
+  color: #333; /* Text color for readability */
+  line-height: 1.6;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.5rem; /* Tailwind's text-2xl */
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+}

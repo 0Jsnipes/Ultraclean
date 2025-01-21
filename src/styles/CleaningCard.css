@@ -1,0 +1,120 @@
+/* Main Container */
+.cleaning-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #e9e2f3; /* Lavender */
+    width: 100%;
+    flex-wrap: wrap; /* Wrap sections on smaller screens */
+  }
+  
+  /* Individual Section */
+  .cleaning-section {
+    display: flex;
+    align-items: stretch; /* Ensure both sides align evenly */
+    background-color: #ffffff; /* Crisp White */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(50% - 2rem); /* Two sections side by side */
+    gap: 1rem;
+    min-height: 500px; /* Increase height for better layout */
+    position: relative; /* Position for placing the button at the bottom */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initial position for animation */
+    transition: opacity 2s ease, transform 2s ease; /* Smooth animation */
+  }
+  
+  .cleaning-section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+  }
+  
+  /* Section Content */
+  .cleaning-section-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: #55356e; /* Royal Purple */
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem; /* Add spacing below the title */
+  }
+  
+  .section-title:hover {
+    color: #7b47ae; /* Darker Royal Purple */
+  }
+  
+  .section-summary {
+    font-size: 1rem;
+    color: #55356e; /* Royal Purple */
+    margin: 1rem 0;
+    flex-grow: 1; /* Ensure the summary stretches to fill space */
+  }
+  
+  /* Button at the Bottom */
+  .cleaning-button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #55356e; /* Royal Purple */
+    color: #ffffff; /* Crisp White */
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cleaning-button a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .cleaning-button:hover {
+    transform: scale(1.05);
+    background-color: #432a56; /* Darker Royal Purple */
+  }
+  
+  /* Section Image */
+  .cleaning-section-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .cleaning-section-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cleaning-sections {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .cleaning-section {
+      flex-direction: column;
+      text-align: center;
+      min-height: auto; /* Remove fixed height on smaller screens */
+    }
+  
+    .cleaning-section-content {
+      text-align: center;
+    }
+  
+    .cleaning-section-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  
