@@ -39,6 +39,9 @@
   .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+
   }
   
   .hero-buttons .hero-btn {

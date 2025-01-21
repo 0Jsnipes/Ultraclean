@@ -1,0 +1,13 @@
+/* Apply a full-page background image */
+.contact-page {
+    background-image: url('../../public/assets/Banner.webp'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the image stay fixed while scrolling */
+    height: 100%;
+    min-height: 0;
+    color: #ffffff; /* Ensure text is readable */
+  }
+  
+  /* Adjust the Header, Input Form, and Footer to blend well */
+ 

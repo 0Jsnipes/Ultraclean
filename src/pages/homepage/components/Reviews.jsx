@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Reviews.css';
+import '../../../styles/Reviews.css';
 
 const reviews = [
   {

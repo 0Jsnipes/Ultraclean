@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Center from "../components/Center";
-import CleaningCard from "../components/CleaningCard";
-import Reviews from "../components/Reviews";
-import Footer from "../components/Footer";
+import Hero from "./components/Hero";
+import Center from "./components/Center";
+import CleaningCard from "./components/CleaningCard";
+import Reviews from "./components/Reviews";
+import Footer from "../../components/Footer";
 
 const HomePage = () => {
   return (

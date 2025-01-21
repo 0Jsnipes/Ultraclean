@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Center.css';
+import '../../../styles/Center.css';
 import { Link } from 'react-router-dom';
 
 const Center = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/CleaningCard.css';
+import '../../../styles/CleaningCard.css';
 
 const CleaningSections = () => {
   const [showButtons, setShowButtons] = useState(false);
