@@ -1,0 +1,32 @@
+.bottom-section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #ffffff; /* Crisp White */
+    color: #55356e; /* Royal Purple */
+  }
+  
+  .bottom-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .bottom-images {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Responsive layout */
+    margin-bottom: 1.5rem;
+  }
+  
+  .bottom-images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bottom-info {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  

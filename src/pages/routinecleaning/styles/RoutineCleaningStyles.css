@@ -1,0 +1,44 @@
+/* Page Container */
+.deep-cleaning-page {
+    background-color: #e9e2f3; /* Lavender */
+    color: #55356e; /* Royal Purple */
+    font-family: Arial, sans-serif;
+    padding: 0;
+    line-height: 1.6;
+    
+}
+  
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .deep-cleaning-header {
+        padding: 1.5rem 1rem;
+      }
+    
+      .deep-cleaning-header h1 {
+        font-size: 2rem;
+      }
+    
+      .deep-cleaning-header p {
+        font-size: 1rem;
+      }
+  
+    .duties-content {
+      gap: 0.8rem;
+    }
+  
+    .duties-list {
+      padding-left: 1rem;
+    }
+  
+    .article-overlay h2 {
+      font-size: 1.5rem;
+    }
+  
+    .article-overlay p {
+      font-size: 0.9rem;
+    }
+  }
+  

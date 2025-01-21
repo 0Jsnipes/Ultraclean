@@ -1,0 +1,161 @@
+/* Duties Section */
+.duties-section {
+    margin-bottom: 2rem;
+    position: relative;
+    margin-top: 2rem;
+  }
+  
+  .duties-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Content Layout */
+  .duties-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .duties-image {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* List Styles */
+  .duties-list-container {
+    background-color: rgba(85, 53, 110, 0.8); /* Semi-transparent Royal Purple */
+    padding: 1rem;
+    border-radius: 12px;
+    display: block; /* Show by default on large screens */
+  }
+  
+  .duties-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Two-column responsive layout */
+    gap: 1rem;
+    list-style-type: disc;
+    padding: 1rem;
+    width: 100%;
+    color: #ffffff; /* Crisp White for text */
+  }
+  
+  /* Button for Small Screens */
+  .show-list-button {
+    display: none; /* Hidden by default */
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #55356e; /* Royal Purple */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .show-list-button:hover {
+    background-color: #432a56; /* Darker Royal Purple */
+    transform: scale(1.05);
+  }
+  
+  .show-list-button:active {
+    transform: scale(0.95);
+  }
+  
+ /* Overlay for Small Screens */
+.duties-overlay {
+    position: fixed; /* Ensure it covers the entire screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(85, 53, 110, 0.8); /* Dark semi-transparent background */
+    display: none; /* Hidden initially */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+    flex-direction: column; /* Stack content vertically */
+  }
+  
+  .duties-overlay.active {
+    display: flex; /* Show the overlay when active */
+  }
+  
+  .duties-overlay .duties-list {
+    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+    color: #55356e; /* Royal Purple */
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  /* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Default Hidden State */
+  .duties-list li {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(10px); /* Slightly shifted */
+    animation: fadeIn 0.8s ease-in-out forwards; /* Fade-in animation */
+    animation-delay: calc(var(--li-index) * 0.5s); /* Delay based on index */
+  }
+  
+  
+  /* Close Button */
+  .close-overlay-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #55356e; /* Royal Purple */
+    color: #ffffff; /* Crisp White */
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1100; /* Ensure it appears above other overlay content */
+  }
+  
+  .close-overlay-button:hover {
+    background-color: #432a56; /* Darker Royal Purple */
+    transform: scale(1.05);
+  }
+  
+  .close-overlay-button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .duties-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .duties-list-container {
+      display: none; /* Hide the list container on small screens */
+    }
+  
+    .show-list-button {
+      display: inline-block; /* Show the button only on small screens */
+    }
+  }
+  

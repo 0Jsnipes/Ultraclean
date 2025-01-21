@@ -32,12 +32,13 @@
   }
   
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    line-height: 1;
   }
   
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     font-family: 'Roboto', sans-serif;
     color: #555;
@@ -89,6 +90,12 @@
     .hero-content {
       width: 100%;
       padding: 1rem;
+    }
+    .hero-title{
+      font-size: 2rem;
+    }
+    .hero-subtitle{
+      font-size: 1rem;
     }
   }
   

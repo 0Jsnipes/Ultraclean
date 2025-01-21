@@ -108,16 +108,27 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .navbar{
+    display: flex;
+    flex-direction: row;
+
+  }
   .navbar-links {
     display: none;
+    font-size: small;
   }
 
   .navbar-hamburger {
-    display: block;
+    display: block
   }
+  .dropdown-button{
+    font-size: small;
+  }
+ 
 
   .navbar-links.active {
     display: flex;
+    font-size: small;
     flex-direction: column;
     align-items: flex-start;
     background-color: #55356e; /* Royal Purple */
@@ -133,10 +144,12 @@
   .navbar-links.active a,
   .navbar-links.active .nav-dropdown {
     margin: 10px 0;
+    font-size: small;
   }
 
   .dropdown-content {
     width: 100%;
     position: relative;
+    font-size: smaller;
   }
 }

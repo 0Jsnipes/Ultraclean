@@ -28,6 +28,7 @@ const NavBar = () => {
           <button className="dropdown-button">Services</button>
           <div className="dropdown-content">
             <Link to="/deep-cleaning">Deep Cleaning</Link>
+            <Link to="/routine-cleaning">Routine Cleaning</Link>
             <Link to="/move-in-out-cleaning">Move-in/Out Cleaning</Link>
             <Link to="/commercial-cleaning">Commercial Cleaning</Link>
             <Link to="/residential-cleaning">Residential Cleaning</Link>

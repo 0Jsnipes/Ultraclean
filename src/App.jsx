@@ -7,8 +7,9 @@ import BathroomCleaning from './pages/BathroomCleaning';
 import BedroomCleaning from './pages/BedroomCleaning';
 import KitchenCleaning from './pages/KitchenCleaning';
 import LivingroomCleaning from './pages/LivingroomCleaning';
-import DeepCleaning from './pages/DeepCleaning';
-import MoveinoutCleaning from './pages/MoveinoutCleaning';
+import DeepCleaning from './pages/deepcleaning/DeepCleaning';
+import RoutineCleaning from './pages/routinecleaning/RoutineCleaning'
+import MoveinoutCleaning from './pages/moveinoutcleaning/MoveinoutCleaning';
 import CommercialCleaning from './pages/ComercialCleaning';
 import ResidentialCleaning from './pages/ResidentialCleaning';
 import Contact from './pages/Contact';
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/kitchen-cleaning" element={<KitchenCleaning />} />
         <Route path="/livingroom-cleaning" element={<LivingroomCleaning />} />
         <Route path="/deep-cleaning" element={<DeepCleaning />} />
+        <Route path="/routine-cleaning" element={<RoutineCleaning />}/>
         <Route path="/move-in-out-cleaning" element={<MoveinoutCleaning />} />
         <Route path="/commercial-cleaning" element={<CommercialCleaning />} />
         <Route path="/residential-cleaning" element={<ResidentialCleaning />} />
