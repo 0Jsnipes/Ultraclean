@@ -48,7 +48,7 @@ const CleaningSections = () => {
           </p>
           {showButtons && (
             <button className="cleaning-button">
-              <Link to="/deep-cleaning">I Need Deep Cleaning</Link>
+              <Link to="/contact">I Need Deep Cleaning</Link>
             </button>
           )}
         </div>
@@ -74,7 +74,7 @@ const CleaningSections = () => {
           </p>
           {showButtons && (
             <button className="cleaning-button">
-              <Link to="/routine-cleaning">I Need Routine Cleaning</Link>
+              <Link to="/contact">I Need Routine Cleaning</Link>
             </button>
           )}
         </div>
