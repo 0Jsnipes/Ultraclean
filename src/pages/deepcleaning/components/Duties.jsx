@@ -31,7 +31,7 @@ const Duties = () => {
   return (
     <div>
       <section className="duties-section">
-        <h2>What We Do?</h2>
+        <h2>What do we do?</h2>
         <div className="duties-content">
           <img
             src="../../public/assets/deep-cleaning-duties2.webp"

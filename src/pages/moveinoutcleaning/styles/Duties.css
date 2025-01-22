@@ -1,39 +1,110 @@
+/* Base styles */
 .duties-section {
-    padding: 2rem 1rem;
-    background-color: #e9e2f3; /* Lavender */
-    color: #55356e; /* Royal Purple */
-    text-align: center;
+  padding: 2rem 1rem;
+  background-color: #e9e2f3; /* Lavender */
+  color: #55356e; /* Royal Purple */
+}
+
+.duties-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.duties-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+   /* Positioning context for absolute children */
+}
+
+/* Photo styles */
+.duties-photo {
+  margin: auto;
+  max-width: 80%;
+  height: auto; /* Adjusts based on the width to maintain aspect ratio */
+  display: block;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+/* Overlay style */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the overlay */
+  width: 80%; /* Match the photo width or adjust as needed */
+  height: 50%; /* Set height or adjust as needed */
+  background-color: rgba(85, 53, 110, 0.008); /* Semi-transparent Royal Purple */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  animation: fadeInOverlay 1s ease-out .7s forwards; /* Starts after 2 seconds */
+}
+
+/* Overlay and list animations */
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+    visibility: hidden;
   }
-  
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.duties-list-container {
+  transform: translateY(20px);
+  opacity: 0;
+  z-index: 20;
+  animation: fadeInList 2s ease-out 3s forwards; /* Starts after 3 seconds to follow the overlay */
+}
+
+@keyframes fadeInList {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.duties-note {
+  font-size: 1rem;
+  width: 600px;
+  margin-top: 1rem;
+  background-color: #55356e;
+  color: #e9e2f3;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px ;
+  border: none;
+}
+.duties-note:hover {
+  background-color: #e9e2f3;
+  color: #55356e;
+  transform: scale(1.05);
+  border: #55356e solid 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .duties-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
   }
-  
-  .duties-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+
+  .duties-photo {
+    max-height: 300px; /* Smaller height on smaller screens */
   }
-  
+
   .duties-list-container {
-    background-color: rgba(85, 53, 110, 0.8); /* Semi-transparent Royal Purple */
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 1rem; /* Smaller padding */
   }
-  
-  .duties-list {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    color: #ffffff; /* Crisp White */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 1rem;
-  }
-  
-  .duties-note {
-    font-size: 1rem;
-    margin-top: 1rem;
-  }
-  
+}
