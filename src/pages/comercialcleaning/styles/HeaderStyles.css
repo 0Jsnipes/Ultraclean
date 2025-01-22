@@ -39,6 +39,7 @@
   .link {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+    margin-top: 1rem;
     margin-right: 1rem;
     border-radius: 5px;
     cursor: pointer;

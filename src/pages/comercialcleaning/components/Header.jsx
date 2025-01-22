@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom'
-import '../styles/Header.css';
+import '../styles/HeaderStyles.css';
 
 const Header = () => {
   return (
@@ -13,7 +12,7 @@ const Header = () => {
         and attention to detail, setting the standard for a spotless and welcoming business atmosphere.
         </p>
        <Link to='/contact'>
-        <button className='link'>We clean so you can focus on building</button>
+        <button className='link'>We clean so you can focus on business</button>
         </Link>
       </div>
     </header>

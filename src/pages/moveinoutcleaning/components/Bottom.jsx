@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../styles/Bottom.css';
 
 const Bottom = () => {
@@ -6,6 +6,7 @@ const Bottom = () => {
     <section className="bottom-section">
       <h2>Why Choose Us?</h2>
       <div className="bottom-images">
+        {/*I want to make these flip over and be clickable giving reasons to choose this company*/ }
         <img src="../../public/assets/move-in-cleaning1.webp" alt="Clean home ready to move in" />
         <img src="../../public/assets/move-out-cleaning2.webp" alt="Vacant clean apartment" />
         <img src="../../public/assets/move-in-cleaning2.webp" alt="Spotless kitchen for move in" />

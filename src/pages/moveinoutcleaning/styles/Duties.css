@@ -1,5 +1,6 @@
 /* Base styles */
 .duties-section {
+  margin: 0;
   padding: 2rem 1rem;
   background-color: #e9e2f3; /* Lavender */
   color: #55356e; /* Royal Purple */
@@ -90,8 +91,7 @@
 .duties-note:hover {
   background-color: #e9e2f3;
   color: #55356e;
-  transform: scale(1.05);
-  border: #55356e solid 1px;
+  border: #55356e solid .5px;
 }
 
 /* Responsive adjustments */

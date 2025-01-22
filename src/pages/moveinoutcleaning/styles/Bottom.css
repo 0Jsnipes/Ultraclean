@@ -1,7 +1,7 @@
 .bottom-section {
     padding: 2rem 1rem;
     text-align: center;
-    background-color: #ffffff; /* Crisp White */
+    background-color: #e9e2f3; /* Crisp White */
     color: #55356e; /* Royal Purple */
   }
   
@@ -12,7 +12,7 @@
   
   .bottom-images {
     display: flex;
-    gap: 1rem;
+    gap: 5rem;
     justify-content: center;
     flex-wrap: wrap; /* Responsive layout */
     margin-bottom: 1.5rem;
@@ -26,6 +26,7 @@
   }
   
   .bottom-info {
+
     font-size: 1.2rem;
     line-height: 1.6;
   }

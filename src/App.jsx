@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './common/NavBar';
 import HomePage from './pages/homepage/HomePage';
@@ -10,7 +10,7 @@ import LivingroomCleaning from './pages/LivingroomCleaning';
 import DeepCleaning from './pages/deepcleaning/DeepCleaning';
 import RoutineCleaning from './pages/routinecleaning/RoutineCleaning'
 import MoveinoutCleaning from './pages/moveinoutcleaning/MoveinoutCleaning';
-import CommercialCleaning from './pages/ComercialCleaning';
+import CommercialCleaning from './pages/comercialcleaning/ComercialCleaning';
 import ResidentialCleaning from './pages/ResidentialCleaning';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
