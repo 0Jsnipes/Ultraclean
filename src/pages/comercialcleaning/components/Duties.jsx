@@ -1,6 +1,6 @@
 import '../styles/comDuties.css';
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -19,7 +19,7 @@ const Duties = () => {
   };*/
 
   useEffect(() => {
-    listItemRefs.current.forEach((el, index) => {
+    listItemRefs.current.forEach((el) => {
       gsap.fromTo(el, 
         { x: -100, autoAlpha: 0 },
         {

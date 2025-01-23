@@ -6,7 +6,9 @@ const Process = () => {
             <section className="process-section">
                 <div className="process-content">
                     <h2>How We Clean Your Bathroom</h2>
-                    <p>Our bathroom cleaning process is thorough and tailored to meet the highest standards of hygiene and cleanliness. Here’s what we do:</p>
+                    <p>Our bathroom cleaning process is thorough and tailored to meet the highest standards of hygiene and cleanliness.</p> 
+                    <br/>
+                    <p><strong>Here’s what we do:</strong></p>
                     <ul>
                         <li>Sanitization of all surfaces to kill germs and bacteria.</li>
                         <li>Scrubbing of tiles, shower doors, and fixtures to remove soap scum and water stains.</li>
@@ -16,7 +18,9 @@ const Process = () => {
                     </ul>
                     <div className="process-tips">
                         <h3>Cleaning Recommendations</h3>
-                        <p>Regular cleaning is crucial for maintaining a sanitary bathroom environment. We recommend:</p>
+                        <p>Regular cleaning is crucial for maintaining a sanitary bathroom environment.</p>
+                        <br/>
+                        <p><strong>We recommend:</strong></p>
                         <ul>
                             <li>Weekly cleaning for frequently used bathrooms.</li>
                             <li>Bi-weekly cleanings for less frequented bathrooms.</li>

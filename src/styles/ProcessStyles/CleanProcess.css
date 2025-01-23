@@ -4,6 +4,9 @@
     align-items: flex-start;
     padding: 20px;
     background-color: #f8f8f8; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 1.2rem;
 }
 
 .process-content {
@@ -12,7 +15,8 @@
 }
 .process-content h2{
     color: #55356e;
-    margin-top: 50px
+    margin-top: 50px;
+    font-size: 2rem;
 }
 .process-content p{
     line-height: auto;
@@ -40,6 +44,7 @@
 .process-tips h3 {
     color: #55356e;
     margin-top: 100px;
+    font-size: 1.5rem;
 }
 
 .process-tips ul {

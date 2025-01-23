@@ -4,9 +4,9 @@ import NavBar from './common/NavBar';
 import HomePage from './pages/homepage/HomePage';
 import About from './pages/About';
 import BathroomCleaning from './pages/rooms/bathroom/BathroomCleaning';
-import BedroomCleaning from './pages/rooms/BedroomCleaning';
-import KitchenCleaning from './pages/rooms/KitchenCleaning';
-import LivingroomCleaning from './pages/rooms/LivingroomCleaning';
+import BedroomCleaning from './pages/rooms/bedroom/BedroomCleaning';
+import KitchenCleaning from './pages/rooms/kitchen/KitchenCleaning';
+import LivingroomCleaning from './pages/rooms/living/LivingroomCleaning';
 import DeepCleaning from './pages/deepcleaning/DeepCleaning';
 import RoutineCleaning from './pages/routinecleaning/RoutineCleaning'
 import MoveinoutCleaning from './pages/moveinoutcleaning/MoveinoutCleaning';

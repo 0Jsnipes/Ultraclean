@@ -10,7 +10,7 @@ const Duties = () => {
   listItemRefs.current = [];
 
   useEffect(() => {
-    listItemRefs.current.forEach((el, index) => {
+    listItemRefs.current.forEach((el) => {
       gsap.fromTo(el, 
         { x: -100, autoAlpha: 0 },
         {

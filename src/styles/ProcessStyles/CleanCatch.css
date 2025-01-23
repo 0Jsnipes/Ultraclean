@@ -1,0 +1,129 @@
+.catch-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30% 60%; /* Adjust based on content to not exceed 800px total height */
+    max-height: 800px;
+    width: 100%;
+    border: 2px solid lavender; /* Royal Purple border around the container */
+    grid-gap: 2px; /* Spacing for the grid that can act as a border */
+    background-color: #55356E; /* Background for the grid gap to appear as borders */
+}
+
+.catch-image{
+    grid-row: 1/4;
+}
+.catch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full area of the grid cell */
+    
+}
+
+.catch-quote {
+    background-color: lavender; /* White background for readability */
+    color: #55356E; /* Royal Purple text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.catch-color-block {
+    background-size: cover; /* Ensure it covers the entire area */
+    background-position: center; /* Center the background image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2 / 3;
+    height: 100%; /* Ensure it fills the grid area */
+}
+
+
+.catch-cta button {
+    background-color: #55356E; /* Royal Purple */
+    color: #FFFFFF; /* White text */
+    border: none;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-size: 1.4rem;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.catch-cta button:hover {
+    background-color: #E9E2F3; /* Light Lavender */
+    color: #55356E; /* Royal Purple */
+   
+}
+
+
+.catch-cta-button {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e9e2f3; /* Lavender */
+    color: #55356e; /* Royal Purple */
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .catch-cta-button a {
+    color: #432a56; /* Darker Royal Purple */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .catch-cta-button a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .catch-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto; /* Adjust so each section scales according to its content */
+    }
+
+    .catch-image, .catch-color-block {
+        grid-row: auto; /* Allows each section to flow naturally */
+    }
+
+    .catch-image img {
+        width: 100%;
+        height: 200px; /* Adjust height to be auto to maintain aspect ratio */
+        object-fit: cover;
+
+    }
+    .catch-color-block{
+        width: 100%;
+        height: 200px;
+    }
+
+    .catch-quote, .catch-cta, .catch-color-block, .catch-cta-button {
+        width: 100%; /* Full width for all text and button elements */
+        padding: 15px; /* More suitable padding for smaller devices */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .catch-quote {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+        background-color: #55356E;
+        color: #E9E2F3;
+    }
+
+    .catch-cta button {
+        padding: 12px 24px; /* More reasonable padding for mobile */
+        width: 100%; /* Auto width to fit text size */
+    }
+
+    .catch-cta-button {
+        padding: 10px; /* Reduce padding */
+        font-size: 0.9rem; /* Smaller font size for smaller devices */
+    }
+}
