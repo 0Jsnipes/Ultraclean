@@ -6,12 +6,21 @@ const Header = () => {
     return (
         <header className="hero">
             <div className="header-content">
-                <h1>Your final impact statement goes here. Make it memorable!</h1>
+                <h1>Experience the Sparkle! 
+                    </h1>
+                    <h3>  
+
+                    Our expert cleaning services ensure your space is not just clean, it's pristine.
+                    </h3>
                 <Link>
-                <button>Your paragraph text here.</button>
+                <button>Get an Estimate Today</button>
                 </Link>
             </div>
-            <img src="/assets/bathroom-hero.jpg" alt="Decorative Background" className="background-image"/>
+            <video autoPlay loop muted className="background-image">
+                <source src="/assets/bathroom-hero.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+
         </header>
     );
 };
