@@ -1,3 +1,4 @@
+import '../styles/deepArticleStyles.css'
 const Article = () => {
   return (
     <div className=''>

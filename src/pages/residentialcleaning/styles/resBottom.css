@@ -1,0 +1,76 @@
+.banner {
+    position: relative;
+    background-color: #55356E; /* Royal Purple */
+    color: white;
+    text-align: center;
+    height: 270px;
+    padding: 40px 20px; /* Increased padding for a bigger banner */
+    overflow: hidden; /* Ensures nothing spills outside the banner */
+  }
+  
+  .banner-text {
+    font-size: 32px; /* Larger text size */
+    top: 60px;
+    font-family: 'Great Vibes', cursive; /* Example of a cursive font */
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    background-color: #00000034; /* Semi-transparent background */
+  }
+  
+  a {
+    color: rgb(255, 255, 255);
+  }
+  
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Centered horizontally */
+    width: 100%;
+    height: 100%;
+    background: url('/assets/residential-banner.jpg') no-repeat center center / cover;
+    transform: translateX(-50%) scale(1.2); /* Adjusted for initial zoom-out effect */
+    z-index: 1;
+  }
+  
+  .letter {
+    display: inline-block;
+    opacity: 0; /* Start invisible for animation */
+    transition: 0.5s ease-in-out; /* Smooth transition for the opacity */
+  }
+  
+  /* Responsive Design Adjustments */
+  @media (max-width: 768px) {
+    .banner {
+      height: 200px; /* Adjusted for smaller screens */
+      padding: 20px 10px; /* Reduced padding */
+    }
+  
+    .banner-text {
+      font-size: 24px; /* Smaller text size for smaller screens */
+      top: 30px; /* Adjusted top position */
+    }
+  
+    .letter {
+      font-size: 20px; /* Smaller font size for individual letters */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner {
+      height: 150px; /* Further reduced for very small screens */
+      padding: 15px 5px; /* Further reduced padding */
+    }
+  
+    .banner-text {
+      font-size: 18px; /* Even smaller text size for very small screens */
+      letter-spacing: 1px; /* Reduced letter spacing */
+    }
+  
+    .banner-image {
+      transform: translateX(-50%) scale(1); /* Less zoom for smaller screens */
+    }
+  }
+  

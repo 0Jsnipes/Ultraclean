@@ -10,8 +10,8 @@ import LivingroomCleaning from './pages/LivingroomCleaning';
 import DeepCleaning from './pages/deepcleaning/DeepCleaning';
 import RoutineCleaning from './pages/routinecleaning/RoutineCleaning'
 import MoveinoutCleaning from './pages/moveinoutcleaning/MoveinoutCleaning';
-import CommercialCleaning from './pages/comercialcleaning/ComercialCleaning';
-import ResidentialCleaning from './pages/ResidentialCleaning';
+import CommercialCleaning from './pages/comercialcleaning/CommercialCleaning';
+import ResidentialCleaning from './pages/residentialcleaning/ResidentialCleaning';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 

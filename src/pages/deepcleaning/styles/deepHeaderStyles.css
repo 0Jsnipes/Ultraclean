@@ -1,0 +1,31 @@
+/* Header Section */
+.deep-cleaning-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-image: linear-gradient(
+        rgba(85, 53, 110, 0.8),
+        rgba(85, 53, 110, 0.8)
+      ),
+      url('../../public/assets/deep-cleaning-header.webp'); /* Add your background image path */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat;
+    color: #ffffff; /* Crisp White */
+    width: 100%; /* Full width */
+    border-bottom: 5px solid #432a56; /* Accent line */
+  }
+  
+  .deep-cleaning-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for text */
+  }
+  
+  .deep-cleaning-header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for text */
+    margin: 0;
+  }
+  

@@ -1,6 +1,53 @@
-import '../styles/Duties.css';
+import '../styles/comDuties.css';
+
+import { useState, useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Duties = () => {
+  const listItemRefs = useRef([]);
+  listItemRefs.current = [];
+  /*const [showCTA, setShowCTA] = useState(false);
+
+  const handleVideoEnd = () => {
+    setShowCTA(true);
+  };*/
+
+  useEffect(() => {
+    listItemRefs.current.forEach((el, index) => {
+      gsap.fromTo(el, 
+        { x: -100, autoAlpha: 0 },
+        {
+          duration: 2,
+          x: 0,
+          autoAlpha: 1,
+          scale: 1,
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom-=100", // Start when the top of the item hits bottom of the viewport minus 100 pixels
+            end: "top center",
+            toggleActions: "play none none none",
+            // Markers for debugging
+          },
+          onComplete: () => {
+            gsap.to(el, {
+              scale: 1.3,
+              duration: 0.2,
+              yoyo: true,
+              repeat: 1,
+            });
+          }
+        }
+      );
+    });
+  }, []);
+
+  
   return (
     <section className="duties-container">
       {/* Title */}
@@ -25,14 +72,7 @@ const Duties = () => {
             <p>
                 Our skilled cleaning professionals are equipped with the latest tools and techniques to ensure your office, retail space, or commercial property is immaculate, promoting a productive and healthy environment for your staff and clients.
             </p>
-            <ul className="why-choose-list">
-    <h2 className="why-choose-title">Why Choose MB UltraClean?</h2>
-    <li>Flexible Hours: Service available during or after office hours</li>
-    <li>Services Include: Dusting, Mopping, Vacuuming, Window Cleaning</li>
-    <li>Custom Cleaning Schedules: Daily, Weekly, or Bi-Weekly Options</li>
-    <li>Competitive Rates and No-Hassle Guarantees</li>
-    <li>Specialized cleaning for post-construction and renovation sites</li>
-</ul>
+
 
         </div>
       
@@ -41,13 +81,25 @@ const Duties = () => {
         {/* Image */}
         <div className="duties-image">
           <img
-            src="../../public/assets/commercial-cleaning.webp"
+            src="/assets/commercial-duties.jpg"
             alt="Commercial Cleaning"
             />
-         
+             {/*<video src="/assets/commercial-cleaning-video.mp4" controls onEnded={handleVideoEnd}>
+            Your browser does not support the video tag.
+          </video>
+          {showCTA && <div className="video-cta">Schedule your free office cleaning estimate now!</div>}
+          */}
         </div>
     
             </div>
+          <ul className="why-choose-list">
+  <h2 className="why-choose-title">Why Choose MB UltraClean?</h2>
+  {["✔️Flexible Hours", "✔️Excellent Customer Service", "✔️Custom Cleaning Schedule", "✔️Competitive Rates", "✔️Specialized cleaning"].map((item, index) => (
+              <li key={index} ref={el => listItemRefs.current[index] = el}>
+                {item}
+              </li>
+            ))}
+</ul>
   
 
       {/* Call to Action */}
@@ -55,7 +107,7 @@ const Duties = () => {
         <p>
           Seeking exceptional commercial cleaning services?{" "}
           <a href="/contact">Contact us online</a> or call us at{" "}
-          <strong>(843) 284-7720</strong> today!
+          <strong>(336) 675-3700</strong> today!
         </p>
       </div>
     </section>

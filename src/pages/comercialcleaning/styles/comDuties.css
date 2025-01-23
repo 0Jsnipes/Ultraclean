@@ -1,0 +1,195 @@
+/* Duties Section */
+.duties-container {
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background */
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Title and Subtitle */
+  .duties-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #55356e; /* Royal Purple */
+    margin-bottom: 0.5rem;
+  }
+  
+  .duties-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Content Layout */
+  .duties-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  /* Text Content */
+.duties-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .text-column {
+    flex: 1;
+    width: 500px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    line-height: 2;
+  }
+  .text-column h3{
+    text-align: center;
+    border-bottom: #333 1px solid;
+    margin-bottom: 1rem;
+    color: #55356E;
+  }
+  
+  .why-choose-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+
+}
+
+.why-choose-list li {
+    padding-left: 10px; /* Space for the star */
+    background-image: url('path_to_your_star_icon.png'); /* Path to a star image, if you have one */
+    background-repeat: no-repeat;
+    background-position: 0px 5px; /* Adjust as needed to align the star */
+    background-size: 16px 16px; /* Adjust based on the size of your icon */
+    align-items: center;
+    align-self: center;
+    justify-content: start;
+    justify-items: center;
+    text-align: center;
+}
+
+/* If using a star character instead of an image */
+.why-choose-list li::before {
+    content: ''; /* Star character */
+    color: #55356E; /* Royal Purple, or any color you want */
+    font-size: 20px; /* Size of the star */
+    display: inline-block;
+    width: 20px; /* Space for the star */
+    margin-left: -20px; /* Align with the text */
+}
+
+.why-choose-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #55356E; /* Royal Purple */
+    margin-top: 2rem;
+    margin-bottom: 1rem; /* Add spacing between title and list */
+}
+
+
+  /* Image */
+  .duties-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Call to Action */
+  .duties-cta {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e9e2f3; /* Lavender */
+    color: #55356e; /* Royal Purple */
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .duties-cta a {
+    color: #432a56; /* Darker Royal Purple */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .duties-cta a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .duties-text {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-column {
+      width: 100%;
+    }
+  
+    .move-in-out-header {
+      height: auto;
+      text-align: center;
+      background-size: cover;
+      padding: 15px;
+    }
+  
+    .why-choose-list {
+      text-align: left; /* Align list text to the left */
+    }
+  
+    .duties-image {
+        position: relative;
+        width: 100%; /* Adjust based on your layout */
+        margin-top: 1rem;
+      }
+      
+      .duties-image video {
+        max-width: 500px;
+        width: 50%;
+        height: auto;
+      }
+      
+      .video-cta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    .duties-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .why-choose-title {
+      font-size: 1.2rem;
+    }
+  
+    .why-choose-list li::before {
+      font-size: 16px;
+    }
+  
+    .link, .footer-link {
+      font-size: 0.8rem;
+    }
+  
+    .duties-text p, .duties-text h3 {
+      font-size: 0.9rem;
+    }
+  }
+  

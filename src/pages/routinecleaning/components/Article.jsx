@@ -6,7 +6,7 @@ const Article = () => {
       <div className="article-overlay">
         <div className='article-content'>
         <h2>What is Routine Cleaning?</h2>
-        <img src='../../../../public/assets/routine-cleaning-article.webp' />
+        <img src='/assets/routine-cleaning-article.webp' />
         <p>
           Routine cleaning focuses on maintaining cleanliness and organization on a regular schedule. It includes essential tasks such as
           dusting, vacuuming, mopping, and sanitizing frequently used surfaces to keep your space fresh and inviting.

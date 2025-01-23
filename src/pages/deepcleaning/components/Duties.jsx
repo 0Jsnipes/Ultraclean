@@ -1,4 +1,4 @@
-import '../styles/DutiesStyles.css';
+import '../styles/deepDutiesStyles.css';
 import { useEffect, useState } from 'react';
 
 const Duties = () => {
@@ -17,7 +17,7 @@ const Duties = () => {
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
+      { threshold: 0 } // Trigger when 50% of the section is visible
     );
 
     const dutiesSection = document.querySelector('.duties-section');

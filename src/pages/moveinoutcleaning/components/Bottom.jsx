@@ -1,5 +1,5 @@
 
-import '../styles/Bottom.css';
+import '../styles/movBottom.css';
 
 const Bottom = () => {
   return (

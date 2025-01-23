@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Duties.css';
+import '../styles/movDuties.css';
 
 const Duties = () => {
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowOverlay(true);
-    }, 2000); // 2000 milliseconds = 2 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
+ 
   return (
     <section className="duties-section">
       <h2>Move In/Out Cleaning</h2>
@@ -37,12 +30,12 @@ const Duties = () => {
           </div>
         )}
         </div>
+      </div>
           <Link to="/contact">
         <button className="duties-note">
          Our move-in/out cleaning ensures every nook and cranny is spotless, making your move seamless and helping you secure your deposit.
         </button>
           </Link>
-      </div>
     </section>
   );
 };
