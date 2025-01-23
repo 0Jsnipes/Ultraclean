@@ -34,7 +34,7 @@ const Duties = () => {
         <h2>What do we do?</h2>
         <div className="duties-content">
           <img
-            src="../../public/assets/deep-cleaning-duties2.webp"
+            src="/assets/deep-cleaning-duties2.webp"
             alt="Deep Cleaning Duties"
             className="duties-image"
           />

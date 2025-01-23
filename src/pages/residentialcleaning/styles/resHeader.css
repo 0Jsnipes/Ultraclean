@@ -3,14 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align text to the left */
-    background-image: linear-gradient(
-        to left,
-        rgba(85, 53, 110, 0.8),
-        rgba(85, 53, 110, 0.5),
-        rgba(85, 53, 110, 0.2),
-        rgba(0, 0, 0, 0)
-      ),
-      url('/assets/residential-header.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

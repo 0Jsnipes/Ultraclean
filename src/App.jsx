@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './common/NavBar';
 import HomePage from './pages/homepage/HomePage';
 import About from './pages/About';
-import BathroomCleaning from './pages/BathroomCleaning';
-import BedroomCleaning from './pages/BedroomCleaning';
-import KitchenCleaning from './pages/KitchenCleaning';
-import LivingroomCleaning from './pages/LivingroomCleaning';
+import BathroomCleaning from './pages/rooms/bathroom/BathroomCleaning';
+import BedroomCleaning from './pages/rooms/BedroomCleaning';
+import KitchenCleaning from './pages/rooms/KitchenCleaning';
+import LivingroomCleaning from './pages/rooms/LivingroomCleaning';
 import DeepCleaning from './pages/deepcleaning/DeepCleaning';
 import RoutineCleaning from './pages/routinecleaning/RoutineCleaning'
 import MoveinoutCleaning from './pages/moveinoutcleaning/MoveinoutCleaning';

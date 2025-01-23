@@ -48,7 +48,10 @@ const Bottom = () => {
     ))}
     </a>
   </div>
-  <div className="banner-image" >
+  <div className="banner-image"
+  style={{
+    background: `url('/assets/commercial-cleaning-banner.jpg') no-repeat center center / cover`
+  }}> 
   </div>
 </div>
 

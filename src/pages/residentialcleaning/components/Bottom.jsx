@@ -40,15 +40,17 @@ const Bottom = () => {
   }, []);
 
   return (
-    <div className="banner">
-  <div className="banner-text">
+    <div className="banner" >
+  <div className="banner-text" >
    <a href="/contact">
    {Array.from("Clean Spaces Allow For More Fun").map((letter, index) => (
       <span key={index} className="letter">{letter}</span>
     ))}
     </a>
   </div>
-  <div className="banner-image" >
+  <div className="banner-image" style={{
+        background: `url('/assets/residential-banner.jpg') no-repeat center center / cover`
+    }}>
   </div>
 </div>
 

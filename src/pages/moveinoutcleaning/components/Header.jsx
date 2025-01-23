@@ -3,7 +3,16 @@ import '../styles/movHeader.css';
 
 const Header = () => {
   return (
-    <header className="move-in-out-header">
+    <header className="move-in-out-header" style={{
+      backgroundImage: `linear-gradient(
+        to left,
+        rgba(85, 53, 110, 0.8),
+        rgba(85, 53, 110, 0.5),
+        rgba(85, 53, 110, 0.2),
+        rgba(0, 0, 0, 0)
+      ),
+      url('../../public/assets/move-in-out-hero.webp')`
+    }}>
       <div className="header-overlay">
         <h1>Move In/Out Cleaning Services</h1>
         <p>
