@@ -36,6 +36,7 @@
     border: none;
     transition: background-color 0.3s, color 0.3s;
     padding: 10px 20px;
+    border-radius: 25px;
 }
 
 .header-content button:hover {
