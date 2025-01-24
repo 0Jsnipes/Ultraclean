@@ -1,5 +1,5 @@
 import '../styles/DutiesStyles.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const Duties = () => {
   const [showOverlay, setShowOverlay] = useState(false);
