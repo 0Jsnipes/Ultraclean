@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 import '../styles/InputForm.css';
 
 const InputForm = () => {
@@ -6,7 +7,6 @@ const InputForm = () => {
     name: '',
     email: '',
     phone: '',
-    communication: 'call',
     rooms: '',
     service: 'residential',
     message: '',
@@ -20,34 +20,25 @@ const InputForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/send-email', formData);
+      alert(response.data.message);
 
-    // Placeholder for backend API call
-    alert(
-      `Thank you ${formData.name}! We have received your message and will be reaching out shortly.`
-    );
-
-    // Example: Integrate a backend service like Twilio or an SMS API
-    // fetch('/api/send-text', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({
-    //     phone: formData.phone,
-    //     message: `Thank you ${formData.name}! We received your message and will be reaching out shortly regarding your ${formData.service} service.`,
-    //   }),
-    // });
-
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      communication: 'call',
-      rooms: '',
-      service: 'residential',
-      message: '',
-    });
+      // Reset form correctly using the keys defined in your initial state
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        rooms: '',
+        service: 'residential',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send the message. Please try again later.');
+    }
   };
 
   return (
@@ -132,7 +123,6 @@ const InputForm = () => {
           onChange={handleChange}
           placeholder="Your Message"
           rows="5"
-          required
         ></textarea>
       </div>
 
@@ -141,4 +131,4 @@ const InputForm = () => {
   );
 };
 
-export default InputForm;
+export default InputForm; 
