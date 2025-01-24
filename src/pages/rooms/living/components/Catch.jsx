@@ -14,12 +14,7 @@ const Catch = () => {
       </div>
         <div className="catch-container">
             <div className="catch-image">
-                <img src="/assets/living-catch.jpg" alt="Cleanliness" 
-                style={{
-                    height: "798px",
-                    
-                }}
-                 />
+                <img src="/assets/living-catch.jpg" alt="Cleanliness"/>
             </div>
             <div className="catch-quote">
             <blockquote>Reclaim your time and peace of mind with our professional cleaning services.</blockquote>

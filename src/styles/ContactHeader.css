@@ -4,7 +4,7 @@
     background-size: cover; /* Ensure the entire image fits inside the header */
     background-repeat: no-repeat; /* Avoid repeating the image */
     background-position: center bottom; /* Position the image to show the full lady */
-    height: 500px; /* Increase the height to fit the image better */
+    height: 200px; /* Increase the height to fit the image better */
     width: 100%;
     display: flex;
     align-items: center;
@@ -15,10 +15,11 @@
   
   
   .header-overlay {
-    background-color: rgba(85, 53, 110, 0.7); /* Semi-transparent Royal Purple overlay */
+    background-color: rgba(206, 194, 216, 0.418); /* Semi-transparent Royal Purple overlay */
     padding: 2rem;
-    border-radius: 12px; /* Rounded edges for overlay */
+    border-radius: 70px; /* Rounded edges for overlay */
     max-width: 800px; /* Limit the width of the text */
+    margin-top: 4rem;
   }
   
   .header-overlay h1 {

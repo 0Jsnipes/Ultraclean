@@ -1,15 +1,16 @@
 .input-form {
-    background-color: #e7dada;
-    border-radius: 12px;
+    background-color: #e7dada9c;
+    border-radius: 70px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 2rem;
-    margin: 2rem auto;
+    margin: 4rem auto 4rem auto;
     max-width: 600px;
     text-align: center;
   }
   
   .input-form h2 {
-    color: #55356e;
+    color: #ffffff;
+    text-shadow: #432a56 4px 4px 8px;
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
@@ -22,7 +23,8 @@
   .form-group label {
     display: block;
     font-size: 1rem;
-    color: #55356e;
+    color: #ffffff;
+    text-shadow: #432a56 4px 4px 8px;
     margin-bottom: 0.5rem;
   }
   
@@ -56,13 +58,14 @@
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 70px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
   .submit-button:hover {
-    background-color: #432a56;
+    background-color: #ffffff;
+    color: #55356e;
     transform: scale(1.05);
   }
   

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/ContactHeader.css';
 
 const Header = () => {

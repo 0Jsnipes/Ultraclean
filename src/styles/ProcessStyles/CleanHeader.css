@@ -36,8 +36,9 @@
     border: none;
     transition: background-color 0.3s, color 0.3s;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 70px;
     cursor: pointer;
+    text-shadow: 2px #ffffff;
 }
 
 .header-content button:hover {
@@ -81,11 +82,15 @@
         align-items: center; /* Center aligns the content */
         width: 100%; /* Full width */
         order: 2; /* Ensures content is ordered below the video if necessary */
+        background-color: #d9c3dad0;
+        border: none;
+        border-radius: 70px;
+        margin-bottom: 50px;
     }
 
     .background-image {
         width: 100%;
-        height: auto; /* Adjust to cover proportionally */
+        height: 100%; /* Adjust to cover proportionally */
         order: 1; /* Ensures video is at the top */
     }
 

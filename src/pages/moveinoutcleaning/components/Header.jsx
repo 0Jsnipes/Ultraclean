@@ -13,7 +13,7 @@ const Header = () => {
       ),
       url('/assets/move-in-out-hero.jpg')`
     }}>
-      <div className="header-overlay">
+      <div className="move-header-overlay">
         <h1>Move In/Out Cleaning Services</h1>
         <p>
           Start fresh in your new space or leave your old one spotless with our

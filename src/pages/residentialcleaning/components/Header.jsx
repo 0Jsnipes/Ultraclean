@@ -13,7 +13,7 @@ const Header = () => {
           ),
           url('/assets/residential-header.jpg')` 
     }}>
-      <div className="header-overlay">
+      <div className="move-header-overlay">
         <h1>Residential Cleaning Services</h1>
         <p>
           Experience the comfort of a sparkling home with our premium residential cleaning services.
