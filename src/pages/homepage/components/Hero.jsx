@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <div className="hero-image-overlay">
-        <img src="../../public/assets/hero.webp" alt="Cleaning Services" className="hero-image" />
+        <img src="/assets/home-hero.jpg" alt="Cleaning Services" className="hero-image" />
       </div>
       <div className="hero-content">
         <h1 className="hero-title">We Clean,</h1>

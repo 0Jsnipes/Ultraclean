@@ -53,7 +53,7 @@ const CleaningSections = () => {
           )}
         </div>
         <div className="cleaning-section-image">
-          <img src="../../public/assets/CleaningCard2.webp" alt="Deep Cleaning" />
+          <img src="/assets/CleaningCard2.webp" alt="Deep Cleaning" />
         </div>
       </div>
 
@@ -79,7 +79,7 @@ const CleaningSections = () => {
           )}
         </div>
         <div className="cleaning-section-image">
-          <img src="../../public/assets/CleaningCard6.webp" alt="Routine Cleaning" />
+          <img src="/assets/CleaningCard6.webp" alt="Routine Cleaning" />
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ const Duties = () => {
       <div className="duties-content">
         {/* Photo goes here */}
         <div className="photo-container" style={{ position: 'relative' }}>
-        <img src="/assets/moving-duties.webp" alt="Cleaning Tasks" className="duties-photo" />
+        <img src="/assets/moving-duties.jpg" alt="Cleaning Tasks" className="duties-photo" />
         {showOverlay && (
           <div className="overlay">
             <div className="duties-list-container">

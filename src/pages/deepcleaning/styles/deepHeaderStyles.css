@@ -6,7 +6,7 @@
         rgba(85, 53, 110, 0.8),
         rgba(85, 53, 110, 0.8)
       ),
-      url('../../public/assets/deep-cleaning-header.webp'); /* Add your background image path */
+      url('/assets/deep-cleaning-header.webp'); /* Add your background image path */
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: bottom; /* Center the image */
     background-repeat: no-repeat;

@@ -7,7 +7,7 @@ const Article = () => {
     <h2>What is Deep Cleaning?</h2>
     <div className="article-content">
       <img
-        src="../../public/assets/deep-cleaning-article.webp"
+        src="/assets/deep-cleaning-article.webp"
         alt="Deep Cleaning in Action"
         className="article-image"
       />

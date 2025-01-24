@@ -13,11 +13,8 @@ const Header = () => {
                     <button>Get an Estimate Today</button>
                 </Link>
             </div>
-            <video autoPlay loop muted className="background-image">
-                <source src="/assets/bathroom-hero.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-
+            <img src="/assets/bathroom-hero.jpg" className="background-image" />
+          
         </header>
     );
 };

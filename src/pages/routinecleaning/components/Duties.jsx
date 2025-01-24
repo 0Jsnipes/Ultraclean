@@ -33,7 +33,7 @@ const Duties = () => {
       <h2>What do we do?</h2>
       <div className="duties-content">
         <img
-          src="../../../../public/assets/routine-cleaning-duties.webp"
+          src="/assets/routine-cleaning-duties.webp"
           alt="Routine Cleaning Duties"
           className="duties-image"
         />

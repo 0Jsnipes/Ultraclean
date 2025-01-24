@@ -22,7 +22,7 @@ const Center = () => {
           <div className="card-content">
             <div className="card-front">
               <img
-                src="../../public/assets/live.webp"
+                src="/assets/live.webp"
                 alt="Live"
                 className="card-image"
               />
@@ -30,7 +30,7 @@ const Center = () => {
             </div>
             <div className="card-back">
               <img
-                src="../../public/assets/live.webp"
+                src="/assets/live.webp"
                 alt="Live"
                 className="card-back-image"
               />
@@ -51,7 +51,7 @@ const Center = () => {
           <div className="card-content">
             <div className="card-front">
               <img
-                src="../../public/assets/relax.webp"
+                src="/assets/relax.webp"
                 alt="Relax"
                 className="card-image"
               />
@@ -59,7 +59,7 @@ const Center = () => {
             </div>
             <div className="card-back">
               <img
-                src="../../public/assets/relax.webp"
+                src="/assets/relax.webp"
                 alt="Relax"
                 className="card-back-image"
               />
@@ -80,7 +80,7 @@ const Center = () => {
           <div className="card-content">
             <div className="card-front">
               <img
-                src="../../public/assets/enjoy.webp"
+                src="/assets/enjoy.webp"
                 alt="Enjoy"
                 className="card-image"
               />
@@ -88,7 +88,7 @@ const Center = () => {
             </div>
             <div className="card-back">
               <img
-                src="../../public/assets/enjoy.webp"
+                src="/assets/enjoy.webp"
                 alt="Enjoy"
                 className="card-back-image"
               />

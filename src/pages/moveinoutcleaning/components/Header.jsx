@@ -11,7 +11,7 @@ const Header = () => {
         rgba(85, 53, 110, 0.2),
         rgba(0, 0, 0, 0)
       ),
-      url('../../public/assets/move-in-out-hero.webp')`
+      url('/assets/move-in-out-hero.jpg')`
     }}>
       <div className="header-overlay">
         <h1>Move In/Out Cleaning Services</h1>
