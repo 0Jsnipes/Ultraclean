@@ -4,29 +4,6 @@ import { useEffect, useState } from 'react';
 const Duties = () => {
   const [showOverlay, setShowOverlay] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const listItems = document.querySelectorAll('.duties-list li');
-            listItems.forEach((li, index) => {
-              li.style.setProperty('--li-index', index); // Assign index for animation delay
-              li.classList.add('visible'); // Trigger animation
-            });
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    const dutiesSection = document.querySelector('.duties-section');
-    if (dutiesSection) {
-      observer.observe(dutiesSection);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section className="duties-section">

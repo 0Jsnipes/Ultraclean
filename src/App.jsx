@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './common/NavBar';
 import HomePage from './pages/homepage/HomePage';
-import About from './pages/About';
+import About from './pages/faq/About';
 import BathroomCleaning from './pages/rooms/bathroom/BathroomCleaning';
 import BedroomCleaning from './pages/rooms/bedroom/BedroomCleaning';
 import KitchenCleaning from './pages/rooms/kitchen/KitchenCleaning';
@@ -13,7 +13,7 @@ import MoveinoutCleaning from './pages/moveinoutcleaning/MoveinoutCleaning';
 import CommercialCleaning from './pages/comercialcleaning/CommercialCleaning';
 import ResidentialCleaning from './pages/residentialcleaning/ResidentialCleaning';
 import Contact from './pages/Contact';
-import FAQ from './pages/FAQ';
+import FAQ from './pages/faq/FAQ';
 
 const App = () => {
   return (

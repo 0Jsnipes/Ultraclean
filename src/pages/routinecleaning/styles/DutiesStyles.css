@@ -47,24 +47,6 @@
     color: #ffffff; /* Crisp White for text */
   }
   /* Keyframes for Fade-In Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Default Hidden State */
-.duties-list li {
-  opacity: 0; /* Initially hidden */
-  transform: translateY(10px); /* Slightly shifted */
-  animation: fadeIn 0.8s ease-in-out forwards; /* Fade-in animation */
-  animation-delay: calc(var(--li-index) * 0.5s); /* Delay based on index */
-}
 
   
   /* Button for Small Screens */
