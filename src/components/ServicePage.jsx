@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 import Footer from './Footer';
 import PageHero from './PageHero';
+import Reveal from './Reveal';
 import { businessInfo, primaryServices } from '../content/siteContent';
 
 const ServicePage = ({ page }) => {
@@ -19,7 +20,7 @@ const ServicePage = ({ page }) => {
       />
 
       <section className="section section-grid">
-        <article className="surface-card surface-card--padded">
+        <Reveal as="article" className="surface-card surface-card--padded">
           <p className="section-kicker">Included in the visit</p>
           <h2>{page.includedHeading}</h2>
           <p className="section-copy">{page.includedIntro}</p>
@@ -31,9 +32,9 @@ const ServicePage = ({ page }) => {
               </li>
             ))}
           </ul>
-        </article>
+        </Reveal>
 
-        <article className="media-card">
+        <Reveal as="article" className="media-card" delay={0.14}>
           <img src={page.detailImage} alt={page.detailImageAlt} />
           <div className="media-card__body">
             <p className="section-kicker">Best fit</p>
@@ -45,27 +46,27 @@ const ServicePage = ({ page }) => {
               ))}
             </ul>
           </div>
-        </article>
+        </Reveal>
       </section>
 
-      <section className="section">
+      <Reveal as="section" className="section">
         <div className="section-heading">
           <span className="eyebrow">Why clients choose it</span>
           <h2>Practical cleaning built around the result you need.</h2>
         </div>
 
         <div className="feature-grid">
-          {page.benefits.map((benefit) => (
-            <article className="feature-card" key={benefit.title}>
+          {page.benefits.map((benefit, index) => (
+            <Reveal as="article" className="feature-card" delay={index * 0.08} key={benefit.title}>
               <h3>{benefit.title}</h3>
               <p>{benefit.text}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
-      </section>
+      </Reveal>
 
       <section className="section section-grid section-grid--compact">
-        <article className="surface-card surface-card--padded">
+        <Reveal as="article" className="surface-card surface-card--padded">
           <p className="section-kicker">Next step</p>
           <h2>{page.ctaTitle}</h2>
           <p className="section-copy">{page.ctaText}</p>
@@ -78,23 +79,25 @@ const ServicePage = ({ page }) => {
               Call {businessInfo.phone}
             </a>
           </div>
-        </article>
+        </Reveal>
 
-        <article className="surface-card surface-card--padded">
+        <Reveal as="article" className="surface-card surface-card--padded" delay={0.12}>
           <p className="section-kicker">Related services</p>
           <h2>Compare the right fit before you book.</h2>
           <div className="link-stack">
-            {relatedServices.map((service) => (
-              <Link className="link-card" key={service.to} to={service.to}>
-                <div>
-                  <h3>{service.title}</h3>
-                  <p>{service.shortDescription}</p>
-                </div>
-                <FaArrowRight aria-hidden="true" />
-              </Link>
+            {relatedServices.map((service, index) => (
+              <Reveal as="div" delay={index * 0.08} key={service.to}>
+                <Link className="link-card" to={service.to}>
+                  <div>
+                    <h3>{service.title}</h3>
+                    <p>{service.shortDescription}</p>
+                  </div>
+                  <FaArrowRight aria-hidden="true" />
+                </Link>
+              </Reveal>
             ))}
           </div>
-        </article>
+        </Reveal>
       </section>
 
       <Footer />

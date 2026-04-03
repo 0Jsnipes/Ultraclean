@@ -7,11 +7,13 @@ const MobileActionBar = () => {
     <div className="mobile-action-bar">
       <a className="mobile-action-bar__button mobile-action-bar__button--call" href={businessInfo.phoneHref}>
         <FaPhoneAlt aria-hidden="true" />
-        <span>Call Now</span>
+        <span className="mobile-action-bar__label mobile-action-bar__label--full">Call Now</span>
+        <span className="mobile-action-bar__label mobile-action-bar__label--compact">Call</span>
       </a>
       <Link className="mobile-action-bar__button mobile-action-bar__button--quote" to="/contact">
         <FaCalendarAlt aria-hidden="true" />
-        <span>Request Quote</span>
+        <span className="mobile-action-bar__label mobile-action-bar__label--full">Request Quote</span>
+        <span className="mobile-action-bar__label mobile-action-bar__label--compact">Quote</span>
       </Link>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHero from '../../components/PageHero';
+import Reveal from '../../components/Reveal';
 import { faqItems } from '../../content/siteContent';
 
 const FAQ = () => {
@@ -13,18 +14,20 @@ const FAQ = () => {
         title="Common questions, clear answers."
       />
 
-      <section className="section">
+      <Reveal as="section" className="section">
         <div className="faq-list">
-          {faqItems.map((item) => (
-            <details className="faq-item" key={item.question}>
+          {faqItems.map((item, index) => (
+            <Reveal as="div" delay={index * 0.05} key={item.question}>
+              <details className="faq-item">
               <summary>{item.question}</summary>
               <p>{item.answer}</p>
-            </details>
+              </details>
+            </Reveal>
           ))}
         </div>
-      </section>
+      </Reveal>
 
-      <section className="section">
+      <Reveal as="section" className="section">
         <article className="cta-panel cta-panel--wide">
           <p className="section-kicker">Still deciding?</p>
           <h2>Send the details you have and we can help you narrow it down.</h2>
@@ -41,7 +44,7 @@ const FAQ = () => {
             </Link>
           </div>
         </article>
-      </section>
+      </Reveal>
 
       <Footer />
     </main>

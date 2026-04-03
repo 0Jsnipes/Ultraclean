@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import PageHero from '../../components/PageHero';
+import Reveal from '../../components/Reveal';
 
 const aboutPoints = [
   {
@@ -28,7 +29,7 @@ const About = () => {
       />
 
       <section className="section section-grid section-grid--compact">
-        <article className="surface-card surface-card--padded">
+        <Reveal as="article" className="surface-card surface-card--padded">
           <p className="section-kicker">What matters here</p>
           <h2>Cleaning service should feel clear, helpful, and easy to trust.</h2>
           <p className="section-copy">
@@ -40,19 +41,19 @@ const About = () => {
             the focus stays the same: cleaner rooms, sharper detail, and a space that feels
             better to walk into.
           </p>
-        </article>
+        </Reveal>
 
         <div className="feature-grid feature-grid--stacked">
-          {aboutPoints.map((point) => (
-            <article className="feature-card" key={point.title}>
+          {aboutPoints.map((point, index) => (
+            <Reveal as="article" className="feature-card" delay={index * 0.08} key={point.title}>
               <h3>{point.title}</h3>
               <p>{point.text}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="section">
+      <Reveal as="section" className="section">
         <article className="cta-panel cta-panel--wide">
           <p className="section-kicker">Next step</p>
           <h2>Need cleaning for a home, rental, or business?</h2>
@@ -69,7 +70,7 @@ const About = () => {
             </Link>
           </div>
         </article>
-      </section>
+      </Reveal>
 
       <Footer />
     </main>
