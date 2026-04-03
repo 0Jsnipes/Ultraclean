@@ -1,17 +1,8 @@
-import Header from "./components/Header"
-import Process from "./components/Process"
-import Footer from "../../../components/Footer"
-import Catch from "./components/Catch"
+import ProcessPage from '../../../components/ProcessPage';
+import { processPages } from '../../../content/siteContent';
 
 const BathroomCleaning = () => {
-  return (
-    <div className=''>
-      <Header />
-      <Process />
-      <Catch />
-      <Footer />
-    </div>
-  )
-}
+  return <ProcessPage page={processPages.bathroom} />;
+};
 
-export default BathroomCleaning
+export default BathroomCleaning;

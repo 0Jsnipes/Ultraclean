@@ -1,60 +1,141 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'; 
-import '../styles/NavBar.css'
+import { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { FaBars, FaChevronDown, FaPhoneAlt, FaTimes } from 'react-icons/fa';
+import {
+  businessInfo,
+  primaryServices,
+  roomFocusPages,
+} from '../content/siteContent';
+
+const navigationGroups = [
+  {
+    label: 'Services',
+    links: primaryServices.map((service) => ({
+      title: service.title,
+      to: service.to,
+    })),
+  },
+  {
+    label: 'Room Focus',
+    links: roomFocusPages.map((room) => ({
+      title: room.title,
+      to: room.to,
+    })),
+  },
+];
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState(null);
+  const { pathname } = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
   const closeMenu = () => {
     setIsOpen(false);
+    setOpenGroup(null);
   };
 
+  const toggleGroup = (label) => {
+    setOpenGroup((current) => (current === label ? null : label));
+  };
+
+  useEffect(() => {
+    closeMenu();
+  }, [pathname]);
+
+  useEffect(() => {
+    if (window.innerWidth > 960) {
+      return undefined;
+    }
+
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 960) {
+        closeMenu();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <nav className="navbar">
-      {/* Logo */}
-      <div className="navbar-logo">
-        <Link to="/" onClick={closeMenu}>MB Ultra Clean</Link>
-      </div>
+    <header className="site-header">
+      <nav className="navbar">
+        <Link className="navbar-brand" to="/" onClick={closeMenu}>
+          <span>MB Ultra Clean</span>
+          <small>{businessInfo.tagline}</small>
+        </Link>
 
-      {/* Hamburger Menu Icon */}
-      <div className="navbar-hamburger" onClick={toggleMenu}>
-        {isOpen ? <FaTimes className="hamburger-icon" /> : <FaBars className="hamburger-icon" />}
-      </div>
+        <div className={`navbar-panel ${isOpen ? 'is-open' : ''}`}>
+          <div className="navbar-links">
+            {navigationGroups.map((group) => (
+              <div
+                className={`nav-group ${openGroup === group.label ? 'is-open' : ''}`}
+                key={group.label}
+              >
+                <button
+                  className="nav-group-button"
+                  type="button"
+                  onClick={() => toggleGroup(group.label)}
+                >
+                  {group.label}
+                  <FaChevronDown aria-hidden="true" />
+                </button>
+                <div className="nav-group-menu">
+                  {group.links.map((link) => (
+                    <Link
+                      className="nav-dropdown-link"
+                      key={link.to}
+                      onClick={closeMenu}
+                      to={link.to}
+                    >
+                      {link.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
 
-      {/* Navigation Links */}
-      <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-        <div className="nav-dropdown">
-          <button className="dropdown-button">Services</button>
-          <div className="dropdown-content">
-            <Link to="/deep-cleaning" onClick={closeMenu}>Deep Cleaning</Link>
-            <Link to="/routine-cleaning" onClick={closeMenu}>Routine Cleaning</Link>
-            <Link to="/move-in-out-cleaning" onClick={closeMenu}>Move-in/Out Cleaning</Link>
-            <Link to="/commercial-cleaning" onClick={closeMenu}>Commercial Cleaning</Link>
-            <Link to="/residential-cleaning" onClick={closeMenu}>Residential Cleaning</Link>
+            <NavLink className="nav-link" onClick={closeMenu} to="/about">
+              About
+            </NavLink>
+            <NavLink className="nav-link" onClick={closeMenu} to="/faq">
+              FAQ
+            </NavLink>
+            <NavLink className="nav-link nav-link--cta" onClick={closeMenu} to="/contact">
+              Request a Quote
+            </NavLink>
           </div>
-        </div>
-        <div className="nav-dropdown">
-          <button className="dropdown-button">Cleaning Process</button>
-          <div className="dropdown-content">
-            <Link to="/bathroom-cleaning" onClick={closeMenu}>Bathroom Cleaning</Link>
-            <Link to="/bedroom-cleaning" onClick={closeMenu}>Bedroom Cleaning</Link>
-            <Link to="/kitchen-cleaning" onClick={closeMenu}>Kitchen Cleaning</Link>
-            <Link to="/livingroom-cleaning" onClick={closeMenu}>Living Room Cleaning</Link>
-          </div>
-        </div>
-        <Link to="/contact" onClick={closeMenu}>Contact</Link>
-        {/*<Link to="/faq">FAQ</Link>*/}
 
-        {/* Phone Icon and Number */}
-        <a href="tel:3366753700" className="navbar-phone" onClick={closeMenu}>
-          <FaPhone className="phone-icon" /> (336) 675-3700
-        </a>
-      </div>
-    </nav>
+          <a className="navbar-phone navbar-phone--mobile" href={businessInfo.phoneHref}>
+            <FaPhoneAlt aria-hidden="true" />
+            {businessInfo.phone}
+          </a>
+        </div>
+
+        <div className="navbar-actions">
+          <a className="navbar-phone navbar-phone--desktop" href={businessInfo.phoneHref}>
+            <FaPhoneAlt aria-hidden="true" />
+            {businessInfo.phone}
+          </a>
+          <button
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            className="navbar-toggle"
+            onClick={() => setIsOpen((current) => !current)}
+            type="button"
+          >
+            {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+          </button>
+        </div>
+      </nav>
+    </header>
   );
 };
 

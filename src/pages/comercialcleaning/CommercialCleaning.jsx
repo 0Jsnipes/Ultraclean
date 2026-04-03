@@ -1,16 +1,8 @@
-import Header from "./components/Header"
-import Duties from "./components/Duties"
-import Bottom from "./components/Bottom"
-import Footer from "../../components/Footer"
-const ComercialCleaning = () => {
-  return (
-    <div>
-      <Header />
-      <Duties />
-      <Bottom />
-      <Footer />
-    </div>
-  )
-}
+import ServicePage from '../../components/ServicePage';
+import { servicePages } from '../../content/siteContent';
 
-export default ComercialCleaning
+const ComercialCleaning = () => {
+  return <ServicePage page={servicePages.commercialCleaning} />;
+};
+
+export default ComercialCleaning;

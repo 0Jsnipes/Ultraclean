@@ -60,6 +60,9 @@
     .header-content {
       max-width: 90%;
     }
+    .move-in-out-header{
+      width: 100%;
+    }
   
     .move-in-out-header h1 {
       font-size: 2rem;

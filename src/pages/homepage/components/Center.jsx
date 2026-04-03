@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import '../../../styles/Center.css';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../../../styles/Center.css';
 
 const Center = () => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -11,101 +11,80 @@ const Center = () => {
 
   return (
     <section className="center-section">
-      <h2 className="center-heading">{isFlipped ? "Cleaning Tips!" : "We Clean So You Can..."}</h2>
+      <h2 className="center-heading">{isFlipped ? 'Cleaning Tips!' : 'We Clean So You Can...'}</h2>
       <div className="card-container">
         <Link
-          to="/contact"
           className="card"
           onMouseEnter={() => handleCardFlip(true)}
           onMouseLeave={() => handleCardFlip(false)}
+          to="/contact"
         >
           <div className="card-content">
             <div className="card-front">
-              <img
-                src="/assets/live.webp"
-                alt="Live"
-                className="card-image"
-              />
+              <img alt="Live" className="card-image" src="/assets/live.webp" />
               <h3 className="card-text"></h3>
             </div>
             <div className="card-back">
-              <img
-                src="/assets/live.webp"
-                alt="Live"
-                className="card-back-image"
-              />
+              <img alt="Live" className="card-back-image" src="/assets/live.webp" />
               <div className="card-tip-container">
                 <p className="card-tip">
-                  "Routine Cleanings are recommended every 2 weeks to keep your house efficiently cleaned!"
+                  &ldquo;Routine Cleanings are recommended every 2 weeks to keep your house
+                  efficiently cleaned!&rdquo;
                 </p>
               </div>
             </div>
           </div>
         </Link>
+
         <Link
-          to="/contact"
           className="card"
           onMouseEnter={() => handleCardFlip(true)}
           onMouseLeave={() => handleCardFlip(false)}
+          to="/contact"
         >
           <div className="card-content">
             <div className="card-front">
-              <img
-                src="/assets/relax.webp"
-                alt="Relax"
-                className="card-image"
-              />
+              <img alt="Relax" className="card-image" src="/assets/relax.webp" />
               <h3 className="card-text"></h3>
             </div>
             <div className="card-back">
-              <img
-                src="/assets/relax.webp"
-                alt="Relax"
-                className="card-back-image"
-              />
+              <img alt="Relax" className="card-back-image" src="/assets/relax.webp" />
               <div className="card-tip-container">
                 <p className="card-tip">
-                  "Decluttering your home can make routine cleaning faster and more efficient!"
+                  &ldquo;Decluttering your home can make routine cleaning faster and more
+                  efficient!&rdquo;
                 </p>
               </div>
             </div>
           </div>
         </Link>
+
         <Link
-          to="/contact"
           className="card"
           onMouseEnter={() => handleCardFlip(true)}
           onMouseLeave={() => handleCardFlip(false)}
+          to="/contact"
         >
           <div className="card-content">
             <div className="card-front">
-              <img
-                src="/assets/enjoy.webp"
-                alt="Enjoy"
-                className="card-image"
-              />
+              <img alt="Enjoy" className="card-image" src="/assets/enjoy.webp" />
               <h3 className="card-text"></h3>
             </div>
             <div className="card-back">
-              <img
-                src="/assets/enjoy.webp"
-                alt="Enjoy"
-                className="card-back-image"
-              />
+              <img alt="Enjoy" className="card-back-image" src="/assets/enjoy.webp" />
               <div className="card-tip-container">
                 <p className="card-tip">
-                  "Using the right cleaning products for specific surfaces can prolong their lifespan!"
+                  &ldquo;Using the right cleaning products for specific surfaces can prolong
+                  their lifespan!&rdquo;
                 </p>
               </div>
             </div>
           </div>
         </Link>
       </div>
-        <div className='button-center'>
-            <Link to='/contact'>
-              Book Now
-            </Link>
-        </div>
+      <div className="button-center">
+        <Link to="/contact">Book Now</Link>
+      </div>
     </section>
   );
 };

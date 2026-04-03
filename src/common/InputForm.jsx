@@ -1,134 +1,158 @@
 import { useState } from 'react';
 import axios from 'axios';
-import '../styles/InputForm.css';
+import { serviceOptions } from '../content/siteContent';
+
+const initialFormData = {
+  name: '',
+  email: '',
+  phone: '',
+  rooms: '',
+  service: serviceOptions[0],
+  message: '',
+};
 
 const InputForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    rooms: '',
-    service: 'residential',
+  const [formData, setFormData] = useState(initialFormData);
+  const [status, setStatus] = useState({
+    type: 'idle',
     message: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((current) => ({
+      ...current,
       [name]: value,
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:5000/send-email', formData);
-      alert(response.data.message);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus({
+      type: 'loading',
+      message: 'Sending your request...',
+    });
 
-      // Reset form correctly using the keys defined in your initial state
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        rooms: '',
-        service: 'residential',
-        message: '',
+    try {
+      await axios.post('/send-email', formData);
+      setFormData(initialFormData);
+      setStatus({
+        type: 'success',
+        message: 'Your request was sent. We will follow up soon.',
       });
     } catch (error) {
       console.error('Error sending message:', error);
-      alert('Failed to send the message. Please try again later.');
+      setStatus({
+        type: 'error',
+        message: 'The request could not be sent. Please try again or call us directly.',
+      });
     }
   };
 
   return (
-    <form className="input-form" onSubmit={handleSubmit}>
-      <h2>Get In Touch</h2>
-
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Your Name"
-          required
-        />
+    <form className="quote-form" onSubmit={handleSubmit}>
+      <div className="quote-form__header">
+        <p className="section-kicker">Quote form</p>
+        <h2>Request cleaning service</h2>
+        <p>
+          A few details are enough to get started. If you are not sure which service fits,
+          describe the space and we can help narrow it down.
+        </p>
       </div>
 
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Your Email"
-          required
-        />
+      <div className="quote-form__grid">
+        <label className="form-field">
+          <span>Name</span>
+          <input
+            id="name"
+            name="name"
+            onChange={handleChange}
+            placeholder="Your name"
+            required
+            type="text"
+            value={formData.name}
+          />
+        </label>
+
+        <label className="form-field">
+          <span>Email</span>
+          <input
+            id="email"
+            name="email"
+            onChange={handleChange}
+            placeholder="you@example.com"
+            required
+            type="email"
+            value={formData.email}
+          />
+        </label>
+
+        <label className="form-field">
+          <span>Phone</span>
+          <input
+            id="phone"
+            name="phone"
+            onChange={handleChange}
+            placeholder="Best number to reach you"
+            required
+            type="tel"
+            value={formData.phone}
+          />
+        </label>
+
+        <label className="form-field">
+          <span>Service</span>
+          <select id="service" name="service" onChange={handleChange} value={formData.service}>
+            {serviceOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="form-field form-field--full">
+          <span>Approximate rooms or size</span>
+          <input
+            id="rooms"
+            name="rooms"
+            onChange={handleChange}
+            placeholder="For example: 3 bedrooms, small office, or 1 bath apartment"
+            type="text"
+            value={formData.rooms}
+          />
+        </label>
+
+        <label className="form-field form-field--full">
+          <span>Message</span>
+          <textarea
+            id="message"
+            name="message"
+            onChange={handleChange}
+            placeholder="Tell us about the space, your preferred timing, and any rooms you want us to focus on."
+            rows="6"
+            value={formData.message}
+          />
+        </label>
       </div>
 
-      <div className="form-group">
-        <label htmlFor="phone">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          placeholder="Your Phone Number"
-          required
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="rooms">Number of Rooms</label>
-        <input
-          type="number"
-          id="rooms"
-          name="rooms"
-          value={formData.rooms}
-          onChange={handleChange}
-          placeholder="Enter number of rooms"
-          required
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="service">What Service Are You Looking For?</label>
-        <select
-          id="service"
-          name="service"
-          value={formData.service}
-          onChange={handleChange}
+      <div className="quote-form__footer">
+        <button
+          className="button button--primary submit-button"
+          disabled={status.type === 'loading'}
+          type="submit"
         >
-          <option value="residential">Residential Cleaning</option>
-          <option value="commercial">Commercial Cleaning</option>
-          <option value="rental">Vacation Rental Cleaning</option>
-          <option value="moving">Move In/Out Cleaning</option>
-          <option value="deepclean">Deep Cleaning</option>
-          <option value="routine">Routine Cleaning</option>
-        </select>
-      </div>
+          {status.type === 'loading' ? 'Sending...' : 'Send Request'}
+        </button>
 
-      <div className="form-group">
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Your Message"
-          rows="5"
-        ></textarea>
+        {status.type !== 'idle' && (
+          <p className={`form-status form-status--${status.type}`} role="status">
+            {status.message}
+          </p>
+        )}
       </div>
-
-      <button type="submit" className="submit-button">Send Message</button>
     </form>
   );
 };
 
-export default InputForm; 
+export default InputForm;

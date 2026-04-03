@@ -1,18 +1,8 @@
-import Footer from '../../components/Footer'
-import Header from './components/Header';
-import Duties from './components/Duties';
-import Article from './components/Article';
+import ServicePage from '../../components/ServicePage';
+import { servicePages } from '../../content/siteContent';
 
 const DeepCleaning = () => {
-
-  return (
-    <div className="deep-cleaning-page">
-     <Header />
-     <Duties />
-     <Article />
-     <Footer />
-    </div>
-  );
+  return <ServicePage page={servicePages.deepCleaning} />;
 };
 
 export default DeepCleaning;
